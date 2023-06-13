@@ -12,7 +12,7 @@ function createImageElement(images) {
             <a class="gallery__link" href="${image.original}">
                 <img
                 class="gallery__image"
-                src="${image.preview}"
+                 src="${image.preview}"
                 data-source="${image.original}"
                 alt="${image.description}"
                 />
@@ -26,9 +26,9 @@ galleryContainer.addEventListener("click", cardOnClick)
 function cardOnClick(evt) {
     evt.preventDefault();
 
-    if (evt.target.nodeName !== "IMG") {
-        return;
-    }
+    // if (evt.target.nodeName !== "IMG") {
+    //     return;
+    // }
 
     const instance = basicLightbox.create(`
         <img src="${evt.target.dataset.source}" width="800" height="600">
